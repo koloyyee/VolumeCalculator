@@ -4,13 +4,13 @@ public abstract class CalculateVolume implements Cone, Cylinder, Pyramid {
 }
 
 interface Cone {
-    double getConeVolume(double height, double radius);
+    double getConeVolume();
 }
 
 interface Cylinder {
-    double getCylinderVolume(double height, double radius);
+    double getCylinderVolume();
 }
 
 interface Pyramid {
-    double getPyramidVolume(double height, double radius, double length);
+    double getPyramidVolume();
 }
