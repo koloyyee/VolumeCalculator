@@ -74,6 +74,7 @@ public class Calculator extends CalculateVolume {
      * Cone volume equation:
      * V = π r² h/3
      */
+    @Override
     public double getConeVolume(double height, double radius) {
         if (this.height == 0) {
             this.height = height;
@@ -99,6 +100,7 @@ public class Calculator extends CalculateVolume {
      * Cylinder volume equation:
      * V=πr2h
      */
+    @Override
     public double getCylinderVolume(double height, double radius) {
         if (this.height == 0) {
             this.height = height;
@@ -124,6 +126,7 @@ public class Calculator extends CalculateVolume {
      * Pyramid volume equation:
      * V=lwh/3
      */
+    @Override
     public double getPyramidVolume(double height, double length, double width) {
         if (this.height == 0)
             this.height = height;
