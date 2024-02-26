@@ -25,4 +25,9 @@ replay_pid*
 
 /target
 .idea/
-.vscode
+.vscode/
+
+# Classes are not ready#
+ShapeBuilder.java
+BuilderTesting.java
+VolumeCalc.java
