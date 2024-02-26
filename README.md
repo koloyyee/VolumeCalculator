@@ -15,7 +15,6 @@ and other shapes like Cone, Cylinder, etc. are able to extend and inherit from t
 We are also implementing an interface known as "InputChecker", it is a simple interface to make sure each shape will check the input.
 
 
-
-
 [//]: # (## Graphics)
+
 [//]: # (Start implimenting graphic of showing 3D volume shapes.)

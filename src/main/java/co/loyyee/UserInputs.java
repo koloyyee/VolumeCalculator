@@ -64,9 +64,8 @@ public class UserInputs {
         switch (choice) {
             case 2: {
                 double height = checkInput("height", scanner);
-                double width = checkInput("width", scanner);
                 double radius = checkInput("radius", scanner);
-                return new Cylinder(height, width, radius);
+                return new Cylinder(height,  radius);
             }
             case 3: {
 
