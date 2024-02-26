@@ -6,3 +6,7 @@ This repo came from the school work of calculating the volume of a cone, but wha
 
 ## Different Shapes
 I am also calculating other shapes and using the knowledge of overloading.
+
+
+## Graphics
+Start implimenting graphic of showing 3D volume shapes.
