@@ -15,12 +15,16 @@ public class Cylinder extends Shape implements InputChecker{
    */
   @Override
   public double getVolume() {
-    if(!isValid()) throw new IllegalArgumentException("height, width, or radius must be over 0.0");
+    isValid();
     return Math.PI * this.radius * super.height;
   }
 
   @Override
   public boolean isValid() {
-    return super.height > 0 && super.width > 0 && this.radius > 0;
+    if (super.height > 0 && super.width > 0 && this.radius > 0){
+      return true;
+    } else {
+      throw new IllegalArgumentException("height, width, or radius must be over 0.0");
+    }
   }
 }

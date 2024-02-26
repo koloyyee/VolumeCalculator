@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 public class UserInputs {
     final private static String[] shapes = new String[]{"Cone", "Cylinder", "Pyramid"};
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StringBuilder opening = new StringBuilder();
         opening
                 .append("Let's find out the volume of a shape!\n")
                 .append("Press: ");
-        for(int i = 0; i < shapes.length; i++) {
-            opening.append(i+1).append(": ").append(shapes[i]);
+        for (int i = 0; i < shapes.length; i++) {
+            opening.append("\n").append(i + 1).append(": ").append(shapes[i]).append("");
         }
         System.out.println(opening.toString());
 
@@ -19,7 +20,7 @@ public class UserInputs {
         while (willContinue) {
 
             short choice;
-            String picked = ""; 
+            String picked = "";
             while (true) {
                 try {
 
@@ -44,12 +45,13 @@ public class UserInputs {
             Shape shape = pickShape(choice, picked, scanner);
             double volume = shape.getVolume();
             System.out.printf("The %s's volume is %.2f%n", picked, volume);
-            
+
             scanner.nextLine();
-            System.out.println("Shall we continue? Y[es] / N[o]");
+            System.out.println("Shall we continue? (N[o] to stop)");
             String shallContinue = scanner.nextLine();
             if (shallContinue.equalsIgnoreCase("n") || shallContinue.equalsIgnoreCase("no")) {
                 willContinue = false;
+                break;
             } else {
                 System.out.println(opening.toString());
             }
@@ -57,7 +59,7 @@ public class UserInputs {
     }
 
     private static Shape pickShape(short choice, String picked, Scanner scanner) {
-        if(picked.isEmpty()) throw new IllegalArgumentException();
+        if (picked.isEmpty()) throw new IllegalArgumentException();
         System.out.println(String.format("You have picked %s!%n", picked));
         switch (choice) {
             case 2: {
